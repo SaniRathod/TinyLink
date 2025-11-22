@@ -8,7 +8,7 @@ export default function Stats({ params }) {
 
   useEffect(() => {
     setLoading(true);
-    fetch(`/api/${code}`)
+    fetch(`/api/links/${code}`)
       .then((r) => {
         if (!r.ok) throw new Error("Not found");
         return r.json();

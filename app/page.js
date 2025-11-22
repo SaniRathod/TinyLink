@@ -60,7 +60,7 @@ export default function Page() {
   }
 
   async function handleClickCode(c) {
-    await fetch("/api/" + c, { method: "PUT" });
+    await fetch("/api/links/" + c, { method: "PUT" });
     router.push(`/code/${c}`)
   }
   return (
