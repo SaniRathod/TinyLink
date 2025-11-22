@@ -1,6 +1,8 @@
-import { data } from "autoprefixer";
-import prisma from "../../../lib/prisma";
+export const dynamic = "force-dynamic";
+export const fetchCache = "force-no-store";
+export const revalidate = 0;
 
+import prisma from "../../../lib/prisma";
 
 export async function DELETE(req, { params }) {
   const { code } = params;
@@ -45,7 +47,6 @@ export async function PUT(req, { params }) {
     where: { code },
     data: {
       clicks: update,
-      // lastClicked: clicked
     }
 
   })
