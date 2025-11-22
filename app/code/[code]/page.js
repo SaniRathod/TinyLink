@@ -29,7 +29,7 @@ export default function Stats({ params }) {
       <p><strong>Last clicked:</strong> {data.lastClicked ? new Date(data.lastClicked).toLocaleString() : "-"}</p>
       <p><strong>Created:</strong> {new Date(data.createdAt).toLocaleString()}</p>
       <div className="mt-4">
-        <a href={'/' + data.code} className="text-sm underline">Open redirect (test)</a>
+        <a href={data.url} className="text-sm underline">Open redirect (test)</a>
       </div>
     </div>
   );
